@@ -25,5 +25,8 @@ go build -o bin/macos/go_text_to_speech main.go
 # run in server
 $ sudo chmod -R 755 go_text_to_speech
 $ sudo ./go_text_to_speech
+
+# run process in background
+sudo nohup ./go_text_to_speech &
 ```
 # go_text_to_speech
