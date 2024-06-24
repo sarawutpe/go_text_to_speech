@@ -120,11 +120,11 @@ func getVoiceFromCache(text string) string {
 
 func main() {
 	// Handle API endpoint
-	http.HandleFunc("/api/v1/text_to_speech", getTextToSpeech)
+	http.HandleFunc("/text_to_speech/api_v1", getTextToSpeech)
 
 	// Handle route for 'static' directory
 	const staticDir = "./files/com_voice"
-	const routePrefix = "/files/com_voice/"
+	const routePrefix = "/text_to_speech/files/com_voice/"
 	fs := http.FileServer(http.Dir(staticDir))
 	http.Handle(routePrefix, http.StripPrefix(routePrefix, fs))
 
